@@ -77,8 +77,8 @@ def updateMapFromList(fromList, toMap):
 
 
 def extractFeatures(dataname):
-  outputFolder = '../../data/'+dataname+'/intermediate/'
-  infilename = '../../data/'+dataname+'/source/sentences.json'
+  outputFolder = '../../data/'+dataname+'/'
+  infilename = '../../data/'+dataname+'/sentences.json'
   eidSkipgramCounts = {}
   eidTypeCounts = {}
   eidPairCounts = {}

@@ -11,9 +11,9 @@ import sys
 
 def main(corpusName):
     data = corpusName
-    intputFile = '../../data/'+data+'/source/sentences.json.raw'
-    outputEntityListFile = '../../data/'+data+'/intermediate/entitylist.txt'
-    outputTypeListFile = '../../data/'+data+'/intermediate/typelist.txt'
+    intputFile = '../../data/'+data+'/sentences.json.raw'
+    outputEntityListFile = '../../data/'+data+'/entitylist.txt'
+    outputTypeListFile = '../../data/'+data+'/typelist.txt'
 
     mentionList = []
     typeList = []

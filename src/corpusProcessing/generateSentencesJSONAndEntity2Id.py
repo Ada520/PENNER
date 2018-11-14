@@ -23,10 +23,10 @@ def load_candidate_phrase2id(input_file_path):
 if __name__ == '__main__':
     corpusName = sys.argv[1]
     # corpusName = "cs14confs"
-    input_phrase_file_path = "../../data/"+corpusName+"/source/np_phrases.txt"
-    input_sentence_json_path = "../../data/"+corpusName+"/source/sentences.json.raw.tmp"
-    output_sentence_json_path = "../../data/"+corpusName+"/source/sentences.json"
-    output_entity2id_path = "../../data/"+corpusName+"/intermediate/entity2id.txt"
+    input_phrase_file_path = "../../data/"+corpusName+"/np_phrases.txt"
+    input_sentence_json_path = "../../data/"+corpusName+"/sentences.json.raw.tmp"
+    output_sentence_json_path = "../../data/"+corpusName+"/sentences.json"
+    output_entity2id_path = "../../data/"+corpusName+"/entity2id.txt"
     candidate_phrase2id = load_candidate_phrase2id(input_phrase_file_path)
     entity2id = {}
     with open(input_sentence_json_path,"r") as fin, open(output_sentence_json_path,"w") as fout:

@@ -206,7 +206,7 @@ def TFIDF_expansion(eid2skipgram_w_strength, skipgram2eid_w_strength, eid2name, 
 def main():
     corpusName = sys.argv[1]
     featureName = sys.argv[2]
-    folder = '../../data/'+corpusName+'/intermediate/'
+    folder = '../../data/'+corpusName+'/'
     inputFileName = folder+'eid'+featureName+'Counts.txt'
     outputFileName = folder+'eid'+featureName+'2TFIDFStrength.txt'
     if featureName.startswith("Pair"):

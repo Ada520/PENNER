@@ -1,4 +1,4 @@
-data=dblp
+data=penner
 path=$(pwd)
 ENTITY_MIN_SUP=15
 ## If use the script under corpusProcessing to generate the corpus, set DRY_RUN=0, otherwise, set it to be 1
@@ -10,14 +10,6 @@ EMBEDDING_METHOD=word2vec
 
 echo 'Corpus Name:' $data
 echo 'Current Path:' $path
-
-if [ ! -d ../../data/$data/intermediate ]; then
-	mkdir ../../data/$data/intermediate
-fi
-
-if [ ! -d ../../data/$data/results ]; then
-	mkdir ../../data/$data/results
-fi
 
 echo 'Data preprocessing start'
 

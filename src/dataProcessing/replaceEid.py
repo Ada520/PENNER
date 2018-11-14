@@ -18,9 +18,9 @@ def loadMap(filename):
 
 if __name__ == "__main__":
   data = sys.argv[1]
-  eidMapFilename = '../../data/'+data+'/intermediate/entity2id.txt'
-  jsonFilename = '../../data/'+data+'/source/sentences.json.raw'
-  outputfile = '../../data/'+data+'/source/sentences.json'
+  eidMapFilename = '../../data/'+data+'/entity2id.txt'
+  jsonFilename = '../../data/'+data+'/sentences.json.raw'
+  outputfile = '../../data/'+data+'/sentences.json'
   eidMap = loadMap(eidMapFilename)
   #print(jsonFilename)
   #print(outputfile)

@@ -44,6 +44,8 @@ class AutoPhraseOutput(object):
         })
 
         output_sents = []
+        if 'sentences' not in res:
+                return []
         for sent in res['sentences']:
             ## a new sentence
             output_token_list = []
@@ -178,11 +180,11 @@ def process_corpus(input_path, output_path, output_phrase_to_pos_sequence_path, 
 if __name__ == '__main__':
     corpusName = sys.argv[1] # e.g. cs14confs
     FLAGS_POS_TAGGING = sys.argv[2]
-    input_path = "../../data/"+corpusName+"/source/segmentation.txt"
-    output_path = "../../data/"+corpusName+"/source/sentences.json.raw.tmp"
-    output_phrase_to_pos_sequence_path = "../../data/"+corpusName+"/source/phrase_to_pos_sequence.txt"
-    output_phrase_path = "../../data/"+corpusName+"/source/np_phrases.txt"
-    nlp = StanfordCoreNLP('http://localhost:9002')
+    input_path = "../../data/"+corpusName+"/corpus.txt"
+    output_path = "../../data/"+corpusName+"/sentences.json.raw.tmp"
+    output_phrase_to_pos_sequence_path = "../../data/"+corpusName+"/phrase_to_pos_sequence.txt"
+    output_phrase_path = "../../data/"+corpusName+"/np_phrases.txt"
+    nlp = StanfordCoreNLP('http://localhost:9000')
     autoPhraseOutput = AutoPhraseOutput(input_path=input_path, nlp=nlp)
 
     if FLAGS_POS_TAGGING:

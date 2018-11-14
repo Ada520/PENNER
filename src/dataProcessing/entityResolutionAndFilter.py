@@ -23,9 +23,9 @@ def resolution(surfaceName):
 def main(corpusName, min_sup = -1):
     data = corpusName
     min_sup = int(min_sup)
-    inputFileName = '../../data/'+data+'/intermediate/entitylist.txt'
-    outputFileName = '../../data/'+data+'/intermediate/entity2id.txt'
-    uniqueEntityNameFileOut = '../../data/'+data+'/intermediate/eidlist.txt'
+    inputFileName = '../../data/'+data+'/entitylist.txt'
+    outputFileName = '../../data/'+data+'/entity2id.txt'
+    uniqueEntityNameFileOut = '../../data/'+data+'/eidlist.txt'
 
     eid = 0
     ename2eid = {}

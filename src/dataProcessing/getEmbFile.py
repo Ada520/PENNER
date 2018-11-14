@@ -25,19 +25,19 @@ def loadEidToEntityMap(filename):
 corpusName=sys.argv[1]
 embedMethodName=sys.argv[2]
 if embedMethodName == "type":
-    fname = '../../data/'+corpusName+'/intermediate/entity_name_type.emb'
-    fname_out = '../../data/'+corpusName+'/intermediate/entity_type.emb'
+    fname = '../../data/'+corpusName+'/entity_name_type.emb'
+    fname_out = '../../data/'+corpusName+'/entity_type.emb'
 elif embedMethodName == "PTE":
-    fname = '../../data/'+corpusName+'/intermediate/entity_name.emb'
-    fname_out = '../../data/' + corpusName + '/intermediate/entity.emb'
+    fname = '../../data/'+corpusName+'/entity_name.emb'
+    fname_out = '../../data/' + corpusName + '/entity.emb'
 elif embedMethodName == "word2vec":
-    fname = '../../data/' + corpusName + '/intermediate/entity_name_word2vec.emb'
-    fname_out = '../../data/' + corpusName + '/intermediate/entity_word2vec.emb'
+    fname = '../../data/' + corpusName + '/entity_name_word2vec.emb'
+    fname_out = '../../data/' + corpusName + '/entity_word2vec.emb'
 else:
     print("[ERROR] Unsupported embedding method")
 
 
-mapFile = '../../data/'+corpusName+'/intermediate/entity2id.txt'
+mapFile = '../../data/'+corpusName+'/entity2id.txt'
 with open(fname, 'r') as fin, open(fname_out, 'w') as fout:
     ct = -1
     ename2eid = loadEidToEntityMap(mapFile)

@@ -9,9 +9,9 @@ import sys
 import json
 
 data=sys.argv[1]
-jsonfname = '../../data/'+data+'/source/sentences.json'
-mapfname = '../../data/'+data+'/intermediate/entity2id.txt'
-countfname = '../../data/'+data+'/intermediate/entityCount.txt'
+jsonfname = '../../data/'+data+'/sentences.json'
+mapfname = '../../data/'+data+'/entity2id.txt'
+countfname = '../../data/'+data+'/entityCount.txt'
 with open(jsonfname, 'r') as jsonf, open(mapfname, 'r') as mapf, open(countfname, 'w') as countf:
     map = {}
     countMap = {}

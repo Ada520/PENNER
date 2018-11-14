@@ -25,8 +25,8 @@ def processOneLine(sentInfo):
 
 if __name__ == "__main__":
   corpusName = sys.argv[1]
-  inputFilePath = '../../data/' + corpusName + '/source/sentences.json'
-  outputFilePath = "../../data/" + corpusName + "/intermediate/raw_text.txt"
+  inputFilePath = '../../data/' + corpusName + '/sentences.json'
+  outputFilePath = "../../data/" + corpusName + "/raw_text.txt"
   with open(inputFilePath, "r") as fin, open(outputFilePath, "w") as fout:
     cnt = 0
     for line in fin:

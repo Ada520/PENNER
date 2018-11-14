@@ -62,7 +62,7 @@ if __name__ == "__main__":
     print('Usage: extractRelationalSkipgrams.py -data')
     exit(1)
   corpusName = sys.argv[1]
-  inputFileName = "../../data/"+corpusName+"/source/sentences.json"
-  outputFileName = "../../data/"+corpusName+"/intermediate/eidPairRelationalSkipgramsCounts.txt"
+  inputFileName = "../../data/"+corpusName+"/sentences.json"
+  outputFileName = "../../data/"+corpusName+"/eidPairRelationalSkipgramsCounts.txt"
   res = extractRelationalSkipgrams(inputFileName)
   saveEidPairRelationalSkipgrams(res, outputFileName)

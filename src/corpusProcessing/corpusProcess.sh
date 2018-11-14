@@ -1,9 +1,9 @@
 #!/bin/bash
-data=dblp
+data=penner
 path=$(pwd)
 
 ### Following are the parameters used in auto_phrase.sh
-RAW_TRAIN=${RAW_TRAIN:- ../../../data/$data/source/corpus.txt}
+RAW_TRAIN=${RAW_TRAIN:- ../../../data/$data/corpus.txt}
 MIN_SUP=${MIN_SUP:- 15}
 
 ### Following are the parameters used in phrasal_segmentation.sh
@@ -22,7 +22,7 @@ cd ../tools/AutoPhrase
 make
 ./auto_phrase.sh $RAW_TRAIN $MIN_SUP
 ./phrasal_segmentation.sh $RAW_TRAIN $HIGHLIGHT_MULTI $HIGHLIGHT_SINGLE
-cp results/segmentation.txt ../../../data/$data/source/segmentation.txt
+cp ./models/DBLP/segmentation.txt ../../../data/$data/segmentation.txt
 cd $path
 
 echo ${green}===Running Stanford CoreNLP Tool===${reset}
@@ -34,7 +34,7 @@ if [ ! -d ../tools/CoreNLP/stanford-corenlp ]; then
 	rm -f ../tools/CoreNLP/stanford-corenlp.zip
 fi
 python3 parseAutoPhraseOutput.py $data 1
-if [ ! -d ../../data/$data/intermediate ]; then
-	mkdir ../../data/$data/intermediate
-fi
+
 python3 generateSentencesJSONAndEntity2Id.py $data
+
+python3 nerProc.py $data

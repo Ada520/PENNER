@@ -16,11 +16,11 @@ TOP_K_SG = 200
 # each ranking pass.
 TOP_K_EID = 30
 # MAX_ITER_SET is the maximum number of expansion iterations
-MAX_ITER_SET = 10
+MAX_ITER_SET = 1
 # SAMPLES is the ensemble number
 SAMPLES = 30
 # THRES_MRR is the threshold that determines whether a new entity will be included in the set or not
-THRES_MRR = SAMPLES * (1.0 / 5.0)
+# THRES_MRR = SAMPLES * 0.1
 # Skipgrams with score >= (THRESHOLD * nOfSeedEids) will be retained
 THRESHOLD = 0.0
 # Skipgrams that can cover [FLAGS_SG_POPULARITY_LOWER, FLAGS_SG_POPULARITY_UPPER] numbers of entities will be
@@ -84,7 +84,7 @@ def getFeatureSim(eid, seed, weightByEidAndFeatureMap, features):
 
 # expand the set of seedEntities and return eids by order, excluding seedEntities (original children)
 def setExpan(seedEidsWithConfidence, negativeSeedEids, eid2patterns, pattern2eids, eidAndPattern2strength,
-             eid2types, type2eids, eidAndType2strength, eid2ename, FLAGS_VERBOSE=False, FLAGS_DEBUG=False):
+             eid2types, type2eids, eidAndType2strength, eid2ename, thrsCoef, FLAGS_VERBOSE=False, FLAGS_DEBUG=False):
   ''' Note: currently the confidence score of each entity id is actually not used, just ignore it.
 
   :param seedEidsWithConfidence: a list of [eid (int), confidence_score (float)]
@@ -199,7 +199,7 @@ def setExpan(seedEidsWithConfidence, negativeSeedEids, eid2patterns, pattern2eid
     for ele in sorted(eid2mrr.items(), key=lambda x:-x[1]):
       eid = ele[0]
       mrr_score = ele[1]
-      if mrr_score < THRES_MRR:
+      if mrr_score < SAMPLES * thrsCoef:
         break
       if FLAGS_DEBUG:
         print("Add entity %s with normalized mrr score %s" % (eid2ename[eid], mrr_score / max_mrr))

@@ -41,11 +41,11 @@ def getContexts(tokens, start, end, winSize):
 # winSize = int(sys.argv[6])
 
 data=sys.argv[1]
-infname = '../../data/'+data+'/source/sentences.json'
-ewfname = '../../data/'+data+'/intermediate/ew.txt'
-eefname = '../../data/'+data+'/intermediate/ee.txt'
-esetfname = '../../data/'+data+'/intermediate/e.txt'
-wsetfname = '../../data/'+data+'/intermediate/w.txt'
+infname = '../../data/'+data+'/sentences.json'
+ewfname = '../../data/'+data+'/ew.txt'
+eefname = '../../data/'+data+'/ee.txt'
+esetfname = '../../data/'+data+'/e.txt'
+wsetfname = '../../data/'+data+'/w.txt'
 winSize = 5
 
 eidContextCounts = defaultdict(int)
@@ -53,7 +53,7 @@ eidPair2Count = defaultdict(int)
 eids = set()
 contextWords = set()
 
-inputEntityMapName = '../../data/'+data+'/intermediate/entity2id.txt'
+inputEntityMapName = '../../data/'+data+'/entity2id.txt'
 eid2ename = getEid2EnameMap(inputEntityMapName)
 
 with open(infname, 'r') as fin:

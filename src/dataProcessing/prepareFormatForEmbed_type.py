@@ -24,10 +24,10 @@ def getEid2EnameMap(inputFile):
     return eid2ename
 
 data=sys.argv[1]
-#infname = '/shared/data/zeqiuwu1/fts-summer/data/'+data+'/source/sentences.json'
-infname = '../../data/'+data+'/intermediate/eidTypeCounts.txt'
-etfname = '../../data/'+data+'/intermediate/ef.txt'
-tsetfname = '../../data/'+data+'/intermediate/f.txt'
+#infname = '/shared/data/zeqiuwu1/fts-summer/data/'+data+'/sentences.json'
+infname = '../../data/'+data+'/eidTypeCounts.txt'
+etfname = '../../data/'+data+'/ef.txt'
+tsetfname = '../../data/'+data+'/f.txt'
 
 eidTypeCounts = defaultdict(float)
 typeSet = set()
