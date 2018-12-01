@@ -43,7 +43,7 @@ seedNames['Chemical'] = ['CHEMICAL', 'PATTERN1685'] # Chemical: CHEMICAL, GENE a
 seedNames['Disease'] = ['DISEASE', 'PATTERN3223'] # Disease: DISEASE, cellular DISEASE
 seedNames['Species'] = ['SPECIES', 'PATTERN37'] # Species: SPECIES, female SPECIES
 
-thrsCoef = {'Gene':0.2, 'Chemical':0.4, 'Disease':0.4, 'Species':0.2, 'Process':0.4, 'Treatment':0.2}
+thrsCoef = {'Gene':0.2, 'Chemical':0.4, 'Disease':0.35, 'Species':0.3, 'Process':0.4, 'Treatment':0.2}
 
 negativeSeedEids = []
 for entType in seedNames:
