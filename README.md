@@ -31,10 +31,11 @@ It contains both preprocessing steps and the main expansion algorithm.
 If you find the implementation useful, please cite the following paper:
 ```
 @inproceedings{wang2018penner,
-	title={PENNER: Pattern-enhanced Nested Named Entity Recognition in Biomedical Literature},
-	author={Wang, Xuan and Zhang, Yu and Li, Qi and Wu, Cathy H. and Han, Jiawei},
-	booktitle={BIBM'18},
-	year={2018},
-	organization={IEEE}
+  title={PENNER: Pattern-enhanced Nested Named Entity Recognition in Biomedical Literature},
+  author={Wang, Xuan and Zhang, Yu and Li, Qi and Wu, Cathy H. and Han, Jiawei},
+  booktitle={BIBM'18},
+  pages={540--547},
+  year={2018},
+  organization={IEEE}
 }
 ```
