@@ -20,6 +20,8 @@ Adapted from [SetExpan](https://github.com/mickeystroller/SetExpan), the data pr
 ## Input
 Two input files are required in ```./data/penner/``` (You can change "penner" to your dataset name). One is the corpus with replaced type tokens and candidate meta-patterns (e.g., ```./data/penner/corpus.txt```). The other is the mapping list of pattern id and pattern surface name (e.g., ```./data/penner/pid2mp.txt```).
 
+**To start from a raw corpus, you first need a "flat" biomedical named entity tagger (e.g., [scispacy](https://allenai.github.io/scispacy/)). After entity tagging, please refer to [WW-PIE](https://ieeexplore.ieee.org/document/8621375) (code in ```./pattern.zip```) for meta-pattern discovery.**
+
 ## Running
 You can use the script
 ```
