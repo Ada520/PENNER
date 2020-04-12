@@ -1,6 +1,6 @@
 # PENNER: Pattern-enhanced Nested Named Entity Recognition in Biomedical Literature
 
-This is the implementation of [PENNER: Pattern-enhanced Nested Named Entity Recognition in Biomedical Literature](), published in BIBM 2018. The general goal of this project is to extract nested structures/patterns from a corpus.
+This is the implementation of [PENNER: Pattern-enhanced Nested Named Entity Recognition in Biomedical Literature](https://ieeexplore.ieee.org/document/8621485), published in BIBM 2018. The general goal of this project is to extract nested structures/patterns from a corpus.
 
 ## Quick Start
 To reproduce the results in our paper, you can directly download our preprocessed data/corpus **[here](https://drive.google.com/file/d/1fGUZ_OI_iAlmpsdi1O1Dq3HvTavAu-NJ/view?usp=sharing)**, unzip the folder ```penner/``` and put it under the ```./data/``` folder. Then run
